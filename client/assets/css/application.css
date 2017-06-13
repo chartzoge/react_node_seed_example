@@ -1,0 +1,36 @@
+#app-root .content-root {
+    padding: 15px;
+    padding-bottom: 40px;
+}
+
+#app-root .margin-left-sm {
+    margin-left: 10px;
+}
+
+#app-root .strong-border-top {
+    border-top-width: 2px;
+}
+
+#app-root .pointer:hover {
+    cursor: pointer;
+}
+
+
+#app-root .table-padded th {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 400px;
+    word-break: break-word;
+}
+
+#app-root .table-padded td {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 400px;
+    word-break: break-word;
+}
+
+#app-root .table .expand-row {
+    width: 5px;
+}
+
