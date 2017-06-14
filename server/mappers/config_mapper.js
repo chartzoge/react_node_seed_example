@@ -1,10 +1,8 @@
 "use strict";
 
-import _ from "lodash";
+const _ = require("lodash");
 
-export const CONFIG_STATE = { STAGED: "staged", CURRENT: "current" };
-
-// TODO: group by category, then sub-category, map into table structure that it currentl expects
+const CONFIG_STATE = { STAGED: "staged", CURRENT: "current" };
 
 const getDiff = (configurations) => {
     const stagedConfig = _.filter(configurations, { state: CONFIG_STATE.STAGED });
@@ -27,7 +25,7 @@ const getDiff = (configurations) => {
     .value();
 };
 
-export default (rawConfig) => {
+const fromDB = (rawConfig) => {
     if (!rawConfig) {
         return;
     }
@@ -68,3 +66,5 @@ export default (rawConfig) => {
 
     return { hosts };
 };
+
+module.exports = { fromDB };

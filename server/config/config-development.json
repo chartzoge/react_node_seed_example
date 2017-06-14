@@ -1,0 +1,7 @@
+{
+    "api": {
+        "configService": {
+            "baseUrl": "http://localhost:3001"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "app": {
+        "rootUri": "/"
+    },
+
+    "api": {
+        "configService": {
+            "baseUrl": "http://localhost:1234"
+        }
+    }
+}

@@ -9,7 +9,8 @@ const BUILD_CONFIG = {
         sources: [
             path.join(CWD, "/client/**/*.js"),
             path.join(CWD, "/client/**/*.jsx"),
-            path.join(CWD, "/tasks/**/*.js")
+            path.join(CWD, "/tasks/**/*.js"),
+            path.join(CWD, "/server/**/*.js")
         ]
     },
     assets: {

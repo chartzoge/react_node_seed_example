@@ -4,11 +4,12 @@ import React from "react";
 import _ from "lodash";
 import { connect } from "react-redux";
 
-import diffConfig, { CONFIG_STATE } from "./config_differ";
 import ConfigDifferenceTable from "../../components/config_difference_table_component";
 import SearchBar from "../../components/search_bar_component";
 import BaseModal from "../../components/base_modal_component";
 import ConfigModel from "../../models/config_model";
+
+const CONFIG_STATE = { STAGED: "staged", CURRENT: "current" };
 
 const CONFIRM_STATES = {
     APPLY_CHANGES: "apply",
@@ -118,7 +119,7 @@ class ConfigStaging extends React.Component {
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                                Overview of all changed configuration across all the different BluVectors in your network.
+                                Overview of all changed configuration across your network.
                             </p>
                             <p>
                                 <em>Please note:</em> Once changed have been applied, they cannot be undone.
@@ -151,4 +152,6 @@ class ConfigStaging extends React.Component {
     }
 }
 
-export default connect(state => ({ config: (diffConfig(state.config) || DEFAULT_CONFIG) }))(ConfigStaging);
+export default connect(state => (
+    { config: (state.config ? state.config.configurations : DEFAULT_CONFIG) }
+))(ConfigStaging);

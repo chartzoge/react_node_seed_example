@@ -6,8 +6,8 @@ import Config from "./config/config_route";
 
 const App = () => {
     return (
-        <div>
-            <h1> Hello World! </h1>
+        <div class="content-root">
+            <h1> Hello, {window.ENV.user.name}! </h1>
 
             <div class="content-root">
                 <Route path="/config" component={Config}/>
